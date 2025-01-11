@@ -4,8 +4,8 @@ title = 'About'
 disableReadingTime = true
 +++
 
-Hi, my name is Rafael. I am a **software engineer** and programming enthusiast
-with experience in **machine learning**, **data engineering**, and **DevOps**.
+Hi, my name is Rafael. I am a **software engineer** and programming enthusiast based in
+Salzburg, Austria with experience in **machine learning**, **data engineering**, and **DevOps**.
 
 I enjoy automating processes and I'm trying to learn new things every day.
 
