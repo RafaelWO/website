@@ -1,6 +1,6 @@
 +++
 date = '2024-11-02'
-draft = true
+draft = false
 title = 'Pirel'
 [params]
   disableReadingTime = true
