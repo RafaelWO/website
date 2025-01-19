@@ -5,7 +5,7 @@ title = 'Unparallel'
 disableReadingTime = true
 +++
 
-**Create async web requests via Python in no time** [[GitHub]](https://github.com/RafaelWO/unparallel)
+**Create async web requests via Python in no time** [[GitHub]](https://github.com/RafaelWO/unparallel) {{% github_star "rafaelwo/unparallel" %}}
 
 <!--more-->
 

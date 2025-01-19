@@ -5,7 +5,7 @@ title = 'Space Love'
 disableReadingTime = true
 +++
 
-**A space-shooter game written with LÖVE** [[GitHub]](https://github.com/RafaelWO/space-love)
+**A space-shooter game written with LÖVE** [[GitHub]](https://github.com/RafaelWO/space-love) {{% github_star "rafaelwo/space-love" %}}
 
 <!--more-->
 

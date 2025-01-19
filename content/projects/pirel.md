@@ -6,7 +6,7 @@ title = 'Pirel'
   disableReadingTime = true
 +++
 
-**The Python release cycle in your terminal** [[GitHub]](https://github.com/RafaelWO/pirel)
+**The Python release cycle in your terminal** [[GitHub]](https://github.com/RafaelWO/pirel) {{% github_star "rafaelwo/pirel" %}}
 
 <!--more-->
 
