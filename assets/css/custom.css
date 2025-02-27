@@ -1,1 +1,52 @@
 /* Add custom CSS or override theme styles here */
+.sidebar-about .brand-image {
+    margin-right: 15px;
+}
+
+.sidebar-about img {
+    height: 60px;
+    width: 60px;
+}
+
+.sidebar-about h1 {
+    font-size: 1.2em;
+}
+.sidebar-about p {
+    font-size: 1em;
+}
+
+.sidebar-about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar-nav {
+    margin-top: -10px;
+}
+
+/* Mobile view: small image next to brand text */
+@media (min-width: 48em) {
+    .sidebar-about .brand-image {
+        margin-right: 0px;
+    }
+
+    .sidebar-about img {
+        height: 180px;
+        width: 180px;
+    }
+    .sidebar-about h1 {
+        font-size: 2em;
+    }
+    .sidebar-about p {
+        font-size: 1.25em;
+    }
+
+    .sidebar-about {
+        flex-direction: column;
+    }
+
+    .sidebar-nav {
+        margin-top: 2rem;
+    }
+}
