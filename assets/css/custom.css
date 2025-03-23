@@ -1,1 +1,56 @@
 /* Add custom CSS or override theme styles here */
+.sidebar-about h1 {
+    font-size: 2em;
+}
+
+/*
+On small screens (mobile), display a small image next to brand text.
+Also, only show the headings of the menu items and hide the socials (they will be in the footer)
+*/
+@media (max-width: 48em) {
+    .sidebar-about .brand-image {
+        margin-right: 15px;
+    }
+
+    .sidebar-about img {
+        height: 60px;
+        width: 60px;
+    }
+
+    .sidebar-about h1 {
+        font-size: 1.2em;
+    }
+    .sidebar-about p {
+        font-size: 1em;
+    }
+
+    .sidebar-about {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .sidebar-nav {
+        margin: 0;
+    }
+
+    .sidebar-nav li {
+        display: inline-block;
+        margin: 0 10px;
+    }
+
+    .sidebar-nav li.bullet,li.sub-heading {
+        display: none;
+    }
+
+    aside.sidebar a.social, aside.sidebar p.footnote {
+        display: none;
+    }
+}
+
+
+@media (min-width: 48em) {
+    footer {
+        display: none;
+    }
+}
