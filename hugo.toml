@@ -106,6 +106,10 @@ pluralizelisttitles = false   # removes the automatically appended "s" on sideba
     table_stripe_color_dark = "#202020"             # default is #202020
     text_color_dark = "#EEE"                        # default is #EEE
 
+    # Giscus as commenting engine
+    # See also https://github.com/giscus/giscus
+    giscus = true
+
     # NOTE: If using Remark42 as commenting engine, uncomment and configure these lines
     # remark42 = true
     # remark42_host = "https://yourhost.com"
