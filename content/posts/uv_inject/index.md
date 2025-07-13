@@ -19,7 +19,7 @@ In [1]: import pandas as pd
 
 ```
 
-![importing pandas returns ModuleNotFoundError](./module_not_found.png)
+![importing pandas returns ModuleNotFoundError](module_not_found.png)
 
 To fix this, let's install `pandas` into the `ipython` environment:
 
