@@ -54,3 +54,21 @@ Also, only show the headings of the menu items and hide the socials (they will b
         display: none;
     }
 }
+
+
+/* Footnotes */
+.footnotes {
+    font-size: 80%;
+}
+
+.footnotes p {
+    margin-bottom: .8em;
+    color: #9D9D9D
+}
+
+
+/* Code */
+code {
+  padding: .15em .3em;
+  border-radius: 5px;
+}
