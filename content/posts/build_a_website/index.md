@@ -4,7 +4,7 @@ draft = false
 title = 'How to build a website'
 slug = 'how-to-build-a-website'
 tags = ["website", "hugo", "dns"]
-featuredImage = "/posts/build_a_website/young-tree.JPEG"
+featuredImage = "/posts/how-to-build-a-website/young-tree.jpeg"
 aliases = ['build_a_website']
 +++
 
