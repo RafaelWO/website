@@ -51,7 +51,10 @@ pluralizelisttitles = false   # removes the automatically appended "s" on sideba
 
     # Links to your socials.  Comment or delete any you don't need/use.
     # discord_url = "https://discord.com"
-    email_url = "mailto://weingartner.rafael@hotmail.com"
+
+    # Remove link to email to avoid spam
+    # email_url = "mailto://weingartner.rafael@hotmail.com"
+
     # facebook_url = "https://facebook.com"
     # flickr_url = "https://flickr.com"
     github_url = "https://github.com/RafaelWO"
