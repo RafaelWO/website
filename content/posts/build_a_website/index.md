@@ -2,8 +2,10 @@
 date = '2025-07-13'
 draft = false
 title = 'How to build a website'
+slug = 'how-to-build-a-website'
 tags = ["website", "hugo", "dns"]
 featuredImage = "/posts/build_a_website/young-tree.JPEG"
+aliases = ['build_a_website']
 +++
 
 Most of us developers reach that point in time where we think:

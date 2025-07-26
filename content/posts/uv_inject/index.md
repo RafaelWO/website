@@ -2,8 +2,10 @@
 date = '2025-01-25'
 draft = false
 title = "How to 'pipx inject' in uv"
+slug = 'how-to-uv-inject'
 tags = ["python", "uv", "pipx"]
 series = "TIL"
+aliases = ['uv_inject']
 +++
 
 Have you ever used `pipx inject`? It is the command to install a package into an existing pipx-managed virtual environment[^1].
