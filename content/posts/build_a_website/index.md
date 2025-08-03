@@ -19,7 +19,7 @@ The code is [available on GitHub](https://github.com/RafaelWO/website).
 **In this post, you will learn how to build a website using Markdown and host it on
 GitHub Pages using a custom domain.**
 
-(If you already know how to create a website, feel free to jump to [my takeaways](#takeaways)🦘.)
+(If you already know how to create a website, feel free to jump to [my takeaways](#takeaways) :kangaroo:.)
 
 ## Where to start
 If you are not a web developer (like me), the number of options you have to build a website can be quite overwhelming.
