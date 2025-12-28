@@ -89,3 +89,19 @@ pre {
 .copy-button {
     margin: 10px;
 }
+
+/* Featured images on posts */
+.featured-image {
+    margin-bottom: 2.5rem;
+}
+
+.featured-image img {
+    margin-bottom: 0;
+}
+
+.featured-image-copyright {
+    margin-top: 0.2rem;
+    float: right;
+    color: #7a7a7a;
+    font-size: 0.8rem;
+}

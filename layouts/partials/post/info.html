@@ -1,0 +1,60 @@
+<div class="info">
+  <h1 class="post-title">
+    <a href="{{ .page.Permalink }}">{{ .page.Title }}</a>
+  </h1>
+
+  <div class="headline">
+    <div>
+      {{ with .page.Params.author }}
+        {{ with site.Taxonomies.author.Get . }}
+          <span><a href="{{ .Page.RelPermalink }}">{{ .Page.LinkTitle }}</a> - </span>
+        {{ else }}
+          <span>{{ . }} - </span>
+        {{ end }}
+      {{ end }}
+      {{ if .page.Date }}
+      <time datetime="{{ .page.Date.Format " 2006-01-02T15:04:05Z0700" }}" class="post-date">
+        {{ .page.Date.Format "January 2, 2006" }}
+      </time>
+      {{ end }}
+      {{ if not .page.Params.disableReadingTime }}
+      <span> - </span>
+      <span class="reading-time">
+        {{ if gt .page.ReadingTime 1 }}
+          {{ .page.Scratch.Set "readingTime" "mins" }}
+        {{ else }}
+          {{ .page.Scratch.Set "readingTime" "min" }}
+        {{ end }}
+
+        <span>{{ .page.ReadingTime }} {{ .page.Scratch.Get "readingTime" }} read</span>
+      </span>
+      {{ end }}
+    </div>
+
+    {{ if .page.Params.tags }}
+    <ul class="tags">
+      {{ range .page.Params.tags }}
+      <li class="tag-{{ . }}">
+        <a href="{{ "tags/" | absLangURL }}{{ . | urlize }}">{{ . }}</a>
+      </li>
+      {{ end }}
+    </ul>
+    {{ end }}
+  </div>
+
+  {{ $Site := .page.Site }}
+  {{ if .page.Params.series }}
+  <p class="seriesname">
+    Series: <a href="{{ $Site.BaseURL }}series/{{ .page.Params.series | urlize }}">{{ .page.Params.series }}</a>
+  </p>
+  {{ end }}
+
+  {{ if and .page.Params.featuredImage .showFeaturedImage }}
+  <div class="featured-image">
+    <img src="{{.page.Params.featuredImage}}">
+    {{ if .page.Params.featuredImageFromMe }}
+      <span class="featured-image-copyright">© Rafael Weingartner-Ortner</span>
+    {{ end }}
+  </div>
+  {{ end }}
+</div>

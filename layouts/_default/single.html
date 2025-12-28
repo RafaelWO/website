@@ -1,6 +1,10 @@
 {{ define "main" -}}
 <div class="post">
-  {{ partial "post/info.html" . }}
+  {{ $ctx := dict
+    "page" .
+    "showFeaturedImage" true
+  }}
+  {{ partial "post/info.html" $ctx }}
   {{ .Content }}
   {{ if (.Site.Params.listmonk) }}
     {{ partial "post/listmonk_email_newsletters.html" . }}
