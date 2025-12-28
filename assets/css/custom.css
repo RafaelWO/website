@@ -55,6 +55,11 @@ Also, only show the headings of the menu items and hide the socials (they will b
     }
 }
 
+/* Sidebar bullet points */
+.bullet {
+    margin-top: .4em;
+}
+
 
 /* Footnotes */
 .footnotes {
