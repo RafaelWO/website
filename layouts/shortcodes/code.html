@@ -1,0 +1,81 @@
+{{/* Based on https://www.marcusfolkesson.se/blog/include-code-from-a-file-with-hugo/ */}}
+
+{{ $language := .Get "language" }}
+{{ $source := .Get "source" }}
+{{ $id := .Get "id" }}
+{{ $add_file_name := .Get "add_file_name" }}
+{{ $line_numbers := .Get "line_numbers" }}
+{{ $options := .Get "options" }}
+
+{{ if $line_numbers }}
+  {{ if $options }}
+    {{ $options = (printf "%s, %s" $options "linenos=inline") }}
+  {{ else }}
+    {{ $options = "linenos=inline" }}
+  {{ end }}
+{{ end }}
+
+{{ with .Page.Resources.GetMatch $source }}
+  {{ $snippet := .Content }}
+  {{ $lines := split $snippet "\n" }}
+  {{ $startTag := printf "BEGIN %s" $id }}
+  {{ $endTag := printf "END %s" $id }}
+
+  {{ if $id }}
+
+    {{ $startl := -1 }}
+    {{ $endl := -1 }}
+
+    {{/* Find the lines that ends with the start and end tags. */}}
+    {{ range $index, $line := $lines }}
+      {{ if hasSuffix $line $startTag }}
+        {{ $startl = $index }}
+      {{ else if hasSuffix $line $endTag }}
+        {{ $endl = $index }}
+      {{ end }}
+    {{ end }}
+
+    {{/* Let's add some basic assertions. */}}
+    {{ if lt $startl 0 }}
+      {{ errorf "Named snippet is missing BEGIN tag" }}
+    {{ end }}
+
+    {{ if lt $endl 0 }}
+      {{ errorf "Named snippet is missing END tag" }}
+    {{ end }}
+
+    {{/* Size of the snippet in number of lines. */}}
+    {{ $snippetLen := sub (sub $endl $startl) 1 }}
+    {{/* Create slice with only the lines between the tags. */}}
+    {{ $includedLines := first $snippetLen (after (add $startl 1) $lines) }}
+
+    {{/* Join the lines into the final snippet. */}}
+    {{ $snippet = delimit $includedLines "\n" }}
+
+
+    {{/* Start line from snippet start. */}}
+    {{ if $line_numbers }}
+      {{ $options = (printf "%s, %s=%d" $options "lineNoStart" $startl) }}
+    {{ end }}
+
+  {{ else }}
+
+    {{ $snippet = "" }}
+    {{ range $index, $line := $lines }}
+      {{ if strings.Contains $line $startTag }}
+      {{ else if strings.Contains $line $endTag }}
+      {{ else }}
+        {{ $snippet = (print $snippet "\n"  $line) }}
+      {{ end }}
+    {{ end }}
+
+  {{ end }}
+
+  {{ $code := (trim $snippet "\n\r") }}
+
+  {{ if $add_file_name }}
+    {{ $code = (printf "# file: %s\n%s" $source $code) }}
+  {{ end }}
+
+  {{ highlight $code $language $options }}
+{{ end }}
