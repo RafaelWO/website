@@ -77,3 +77,15 @@ code {
   padding: .15em .3em;
   border-radius: 5px;
 }
+
+pre {
+    border-radius: 10px;
+}
+
+.copy-success {
+    margin: 10px;
+}
+
+.copy-button {
+    margin: 10px;
+}
