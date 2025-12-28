@@ -5,6 +5,7 @@ title = 'How to build a website'
 slug = 'how-to-build-a-website'
 tags = ["website", "hugo", "dns"]
 featuredImage = "/posts/how-to-build-a-website/young-tree.jpeg"
+featuredImageFromMe = true
 aliases = ['build_a_website']
 +++
 
