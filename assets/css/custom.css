@@ -48,10 +48,16 @@ Also, only show the headings of the menu items and hide the socials (they will b
     }
 }
 
-
+/* bigger screns */
 @media (min-width: 48em) {
     footer {
         display: none;
+    }
+
+    aside {
+        overflow-y: scroll;
+        overflow-x: hidden;
+        scrollbar-width: initial !important;
     }
 }
 
