@@ -48,7 +48,24 @@ Also, only show the headings of the menu items and hide the socials (they will b
     }
 }
 
-/* bigger screns */
+/* stack tag under date if screen is small or medium */
+@media (max-width: 64em) {
+    .headline {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.25rem;
+    }
+
+    .headline time {
+        margin-bottom: 0;
+    }
+
+    .headline .tags {
+        align-self: flex-end;
+    }
+}
+
+/* bigger screens */
 @media (min-width: 48em) {
     footer {
         display: none;
